@@ -16,11 +16,13 @@ body {
 .header-container {
 	max-width: 1400px;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 .container {
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 .group:after { 
@@ -37,6 +39,7 @@ ul li {
 
 a {
 	text-decoration: none;
+	color: #000;
 }
 
 #logo {
@@ -51,6 +54,7 @@ a {
 
 header {
 	padding: 2em 0;
+	margin-bottom: 2em;
 	border-bottom: 1px solid #eee;
 }
 
@@ -112,6 +116,73 @@ div.sunday-service p {
   border: 1px solid rgba(0, 0, 0, 0.9);
   display: inline-block;
   padding: 7px 5%;
+}
+
+/********************
+Form
+*********************/
+
+.section-title {
+  text-align: center;
+	padding-bottom: 1em;
+}
+
+.field {
+	padding: 1em 0;
+}
+
+label {
+	display: block;
+	font-size: 1.4em;
+	padding-left: .5em;
+	margin-bottom: .2em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+	height: 48px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-shadow: none;
+	border-radius: 5px;
+	border: 2px solid #eee;
+	padding: 2px 2px 0 8px;
+	font-size: 1.1em;
+}
+
+textarea {
+	height: 200px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+form {
+	padding-bottom: 1em;
+}
+
+.btn-submit {
+	color: #fff;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	padding: .6em 1em;
+  margin: 1em 0;
+	font-size: 1em;
+	background: #e74c3c;
+  display: block;
+  cursor: pointer;
+}
+
+
+/**************************
+       Footer
+**************************/
+
+footer {
+	padding: 1em 0;
+	text-align: center;
 }
 
 

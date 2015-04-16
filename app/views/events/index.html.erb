@@ -1,0 +1,27 @@
+<section class="events">
+  <div class="container">
+
+    <h1 class="section-title">Upcoming Events</h1>
+
+      <% @events.each do |event| %>
+      <section class="event-index clear">
+        <p class="event-date"><%= event.date %></p>
+        <div class="event-info">
+          <p class="event-name"><%= link_to event.name, event_path(event) %></p>
+          <div class="time-location">
+            <span class="event-time"><%= event.time %></span> :
+            <span class="event-location"><%= event.location %></span>
+          </div>
+        </div>
+      </section>
+      <div class="action-links clear">
+        <%= link_to 'Show', event %> |
+        <%= link_to 'Edit', edit_event_path(event) %> |
+       <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <% end %>
+    
+    <%= link_to 'New Event', new_event_path %>
+
+  </div>
+</section>

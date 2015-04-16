@@ -1,0 +1,41 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Name of event" %>
+  </div>
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.text_field :date, placeholder: "Date of the event", id: "datepicker"  %>
+  </div>
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.text_field :time, placeholder: "Time of the event", id: "timepicker" %>
+  </div>
+  <div class="field">
+    <%= f.label :place %>
+    <%= f.text_field :place, placeholder: "Where is the event" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address, placeholder: "Address of the event" %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, placeholder: "Date of the event", rows: "8" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create event", class: "btn-submit" %>
+  </div>
+<% end %>

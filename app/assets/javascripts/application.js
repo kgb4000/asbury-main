@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require pickadate/picker 
+//= require pickadate/picker.date 
+//= require pickadate/picker.time 
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){ 
+	$("#datepicker").pickadate({
+		format: 'dd mmm'
+	});
+	$("#timepicker").pickatime();
+});
