@@ -1,0 +1,144 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box
+}
+
+body {
+	font-size: 1rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/**************************
+       General Styles
+**************************/
+
+.header-container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.group:after { 
+   content: " "; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#logo {
+	font-size: 1.5rem;
+	display: inline-block;
+	float: left;
+}
+
+/**************************
+       Navigation
+**************************/
+
+header {
+	padding: 2em 0;
+	border-bottom: 1px solid #eee;
+}
+
+nav ul.navigation {
+	float: right;
+}
+
+ul.navigation li {
+	float: left;
+	display: inline-block;
+	padding: .7em;
+}
+
+nav li a:hover {
+	border-bottom: 2px solid #eee;
+	padding-bottom: .3em;
+}
+
+/**************************
+       Front Page
+**************************/
+
+.page-intro {
+	border-bottom: 1px solid #eee;
+}
+
+.main-text {
+	padding: 3em 0;
+	display: table;
+  width: 100%;
+}
+
+.centered-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+h1.main-greeting {
+  font-size: 2.2em;
+  margin: .5em 0;
+  color: #000;
+}
+
+p.intro-text {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+div.sunday-service {
+  padding-top: 3em;
+}
+
+div.sunday-service p {
+  font-size: 1em;
+  overflow: hidden;
+  margin: 1.5em 2.5em;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  padding: 7px 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
