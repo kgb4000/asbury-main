@@ -4,13 +4,13 @@
     <h1 class="section-title">Upcoming Events</h1>
 
       <% @events.each do |event| %>
-      <section class="event-index clear">
+      <section class="event-index group">
         <p class="event-date"><%= event.date %></p>
         <div class="event-info">
           <p class="event-name"><%= link_to event.name, event_path(event) %></p>
           <div class="time-location">
             <span class="event-time"><%= event.time %></span> :
-            <span class="event-location"><%= event.location %></span>
+            <span class="event-location"><%= event.address %></span>
           </div>
         </div>
       </section>

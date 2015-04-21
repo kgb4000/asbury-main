@@ -14,3 +14,40 @@
 	</div>
  </section>
 
+ <section class="church-info group container">
+
+	<section class="fp-posts">
+		<h2 class="section-title">Sermons</h2>
+		<% @posts.each do |post| %>
+		  <section class="post">
+		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+		    <p class="post-text"><%= post.text.truncate(120) %></p>
+		  </section>
+	 	<% end %>
+	</section>
+
+	<section class="fp-events">
+		<h2 class="section-title">Church Events</h2>
+		<% @events.each do |event| %>
+		  <section class="event-show">
+		    <p class="fp-event-date"><%= event.date %></p>
+		    <div class="event-info">
+		      <p class="event-name"><%= link_to event.name, event_path(event) %></p>
+		      <div class="clear"></div>
+		    </div>
+		  </section>
+	 	<% end %>
+	</section>
+
+	<section class="fp-posts">
+		<h2 class="section-title">Pastor's Blog</h2>
+		<% @posts.each do |post| %>
+		  <section class="post">
+		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+		    <p class="post-text"><%= post.text.truncate(120) %></p>
+		  </section>
+	 	<% end %>
+	</section>
+
+</section>
+

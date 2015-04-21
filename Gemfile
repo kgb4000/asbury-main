@@ -18,6 +18,7 @@ gem 'aws-sdk'
 gem 'stripe', '~> 1.15.0'
 
 gem 'pickadate-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
 	gem 'sqlite3'

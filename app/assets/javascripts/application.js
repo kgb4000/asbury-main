@@ -16,12 +16,14 @@
 //= require pickadate/picker.date 
 //= require pickadate/picker.time 
 //= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
 
 
 $(document).ready(function(){ 
 	$("#datepicker").pickadate({
-		format: 'dd mmm'
+		format: 'dd mmm', 
+		min: new Date()
 	});
 	$("#timepicker").pickatime();
 });
