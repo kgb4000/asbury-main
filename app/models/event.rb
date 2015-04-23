@@ -15,8 +15,11 @@ class Event < ActiveRecord::Base
 
   validates_attachment_content_type :image, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
   
+  
   def days_left
   	start_date = today()
     end_date = event_date
+    puts (start_date - event_date).to_i + " days remaining"
   end
+
 end

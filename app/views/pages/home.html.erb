@@ -1,6 +1,6 @@
 
 <section class="page-intro">
-	<div class="container">
+	<div class="fp-container">
 		<div class="main-text">
 			<div class="centered-text">
 		    <h1 class="main-greeting">Come to Church on Sunday</h1>
@@ -14,14 +14,14 @@
 	</div>
  </section>
 
- <section class="church-info group container">
+ <section class="church-info group section-container">
 
 	<section class="fp-posts">
 		<h2 class="section-title">Sermons</h2>
 		<% @posts.each do |post| %>
 		  <section class="post">
 		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
-		    <p class="post-text"><%= post.text.truncate(120) %></p>
+		    <p class="post-text"><%= post.text.truncate(20) %></p>
 		  </section>
 	 	<% end %>
 	</section>
@@ -44,7 +44,7 @@
 		<% @posts.each do |post| %>
 		  <section class="post">
 		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
-		    <p class="post-text"><%= post.text.truncate(120) %></p>
+		    <p class="post-text"><%= post.text.truncate(200) %></p>
 		  </section>
 	 	<% end %>
 	</section>

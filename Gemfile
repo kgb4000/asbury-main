@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'figaro'
-gem 'aws-sdk'
+# gem 'aws-sdk'
 gem 'stripe', '~> 1.15.0'
 
 gem 'pickadate-rails'
