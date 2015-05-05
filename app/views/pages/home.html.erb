@@ -14,9 +14,9 @@
 	</div>
  </section>
 
- <section class="church-info group section-container">
+ <section class="church-info section-container group">
 
-	<section class="fp-posts">
+	<section class="fp-sermons">
 		<h2 class="section-title">Sermons</h2>
 		<% @posts.each do |post| %>
 		  <section class="post">
@@ -44,7 +44,17 @@
 		<% @posts.each do |post| %>
 		  <section class="post">
 		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
-		    <p class="post-text"><%= post.text.truncate(200) %></p>
+		    <p class="post-text"><%= post.text.truncate(50) %></p>
+		  </section>
+	 	<% end %>
+	</section>
+
+	<section class="fp-jobs">
+		<h2 class="section-title">Community News</h2>
+		<% @posts.each do |post| %>
+		  <section class="post">
+		    <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+		    <p class="post-text"><%= post.text.truncate(50) %></p>
 		  </section>
 	 	<% end %>
 	</section>

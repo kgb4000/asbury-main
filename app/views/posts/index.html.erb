@@ -2,21 +2,17 @@
   <div class="container">
 
     <h1 class="section-title">Pastor's Blog</h1>
+    <% @posts.each do |post| %>
+      <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+      <p><span class="date"><%= post.date %></span> | <%= post.author %></p>
+      <p class="post-text"><%= post.text.truncate(100) %><%= link_to 'Read more', post %></p>
+      <div class="edit-btns"> 
+        <%= link_to 'Edit', edit_post_path(post) %> |
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
 
-    <%= Time.now.strftime("%m/%d/%Y") %>
-
-      
-        <% @posts.each do |post| %>
-          <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
-          <p><span class="date"><%= post.date %></span> | <%= post.author %></p>
-          <p class="post-text"><%= post.text.truncate(400) %><%= link_to 'Read more', post %></p>
-          <div class="edit-btns"> 
-            <%= link_to 'Edit', edit_post_path(post) %> |
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-        <% end %>
-
-    <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'Write a new post', new_post_path %>
 
   </div>
 </div>

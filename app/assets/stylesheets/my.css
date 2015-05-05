@@ -19,20 +19,27 @@ header {
   margin-bottom: 2em;
 }
 
+.header-container {
+  padding: 0 1em;
+}
+
 .header-container,
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .section-container  {
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 0 1em;
+	max-width: 100%;
+}
+
+.header-container {
+  max-width: 1440px;
 }
 
 .container {
 	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 1em;
 }
-
-
 
 .group:after { 
    content: " "; 
@@ -56,6 +63,13 @@ a {
 	display: inline-block;
 	float: left;
 }
+
+.fp-sermons,
+  .fp-events,
+  .fp-posts,
+  .fp-jobs {
+    padding: 1em 1%;
+  }
 
 /**************************
        Navigation
@@ -85,7 +99,6 @@ nav li a:hover {
 **************************/
 
 .page-intro {
-	border-bottom: 1px solid #eee;
   padding: 0 1em;
 }
 
@@ -115,11 +128,6 @@ p.intro-text {
   line-height: 1.6;
 }
 
-.fp-posts,
-.fp-events {
-  width: 100%;
-}
-
 div.sunday-service {
   padding-top: 2em;
 }
@@ -131,6 +139,24 @@ div.sunday-service p {
   border: 1px solid rgba(0, 0, 0, 0.9);
   display: inline-block;
   padding: 10px 5%;
+}
+
+.fp-sermons,
+.fp-posts,
+.fp-events {
+  width: 100%;
+}
+
+.fp-sermons {
+  background-color: #f7ca18;
+}
+
+.fp-posts {
+  background-color: #f5d76e;
+}
+
+.fp-events {
+  background-color: #f4d03f;
 }
 
 /********************
@@ -206,7 +232,6 @@ section.event-show {
   padding-left: 5%;
   padding-right: 5%;
   overflow: hidden;
-  margin-bottom: 1.5em;
 }
 
 p.event-date {
@@ -238,7 +263,10 @@ div.event-name {
   font-weight: bold;
 }
 
-section.fp-posts h2.post-title a {
+section.fp-sermons h2.post-title a,
+section.fp-events h2.post-title a,
+section.fp-posts h2.post-title a,
+section.fp-jobs h2.post-title a {
   font-size: 1.2rem;
 }
 
@@ -271,6 +299,7 @@ Pastor's Posts
 *********************/
 
 section.post {
+  padding: 0 5%;
 }
 
 section.posts .post-title {
@@ -296,7 +325,24 @@ div.edit-btns {
 
 footer {
 	padding: 1em 0;
+  height: 3em;
 	text-align: center;
+  color: #fff;
+  background: #000;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -3em; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 3em; 
 }
 
 
@@ -304,7 +350,7 @@ footer {
        Media Quires
 **************************/
 
-@media (min-width :900px) {
+@media (min-width :522px) {
 
   header {
     padding-top: 3em;
@@ -323,17 +369,22 @@ footer {
     font-size: 4em;
   }
 
-  
-
   div.sunday-service {
     padding-top: 1em;
   }
 
+  .fp-sermons,
   .fp-events,
-  .fp-posts {
-    padding: 1em 0;
-    width: 33.125%;
+  .fp-posts,
+  .fp-jobs {
+    padding: 1em 1%;
+    width: 50%;
     float: left;
+    height: 300px;
+  }
+
+  p.fp-event-date {
+    font-size: 1.2rem;
   }
 
   h2.section-title {
@@ -342,6 +393,18 @@ footer {
 
   section.events .container form {
     width: 60%;
+  }
+
+  @media (min-width :980px) {
+
+  .fp-sermons,
+  .fp-events,
+  .fp-posts,
+  .fp-jobs {
+    padding: .8em 1%;
+    width: 25%;
+    float: left;
+    height: 300px;
   }
 
 }
